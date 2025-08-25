@@ -1,10 +1,11 @@
 
 import { Agent } from '@mastra/core';
-import { openAIModel } from '../config/openai';
+import { createGemini25Provider } from '../config/googleProvider';
 import { fetchRepoContent } from '../tools/fetch-repo-content';
 import { parseMarkdown } from '../tools/parse-markdown';
 import { extractCodePatterns } from '../tools/extract-code-patterns';
 import { logAgentActivity } from '../config/logger';
+import { openAIModel } from '../config/openai';
 
 export const apiExtractor = new Agent({
   id: 'api-extractor',
@@ -16,7 +17,7 @@ export const apiExtractor = new Agent({
     2. Extract class instantiations, method calls, and configuration objects
     3. Identify the most important code-level constructs
     4. Provide brief descriptions of what each API component does
-    
+
     Focus on finding:
     - Class instantiations: new ClassName(...)
     - Method calls: object.method(...)

@@ -22,13 +22,13 @@ export const comprehensiveDocGenerator = new Agent({
     ## [Repository Name] - Condensed Context Index
 
     ### Overall Purpose
-    Provide a comprehensive 2-3 sentence description explaining what the library/tool does, its primary use cases, and key capabilities. Be specific about the problem it solves and the environments it supports.
+    Provide a comprehensive 5 sentence description explaining what the library/tool does, its primary use cases, and key capabilities. Be specific about the problem it solves and the environments it supports.
 
     ### Core Concepts & Capabilities
     List the main features and capabilities as bullet points. Each bullet should follow this format:
     * **[Concept Name]** - [Detailed description explaining what it is, how it works, and key details]
     
-    Include 6-8 core concepts covering:
+    Include 10-12 core concepts covering:
     - Main objects/classes and their relationships
     - Key operations and methods
     - Data handling and formats
@@ -57,10 +57,25 @@ export const comprehensiveDocGenerator = new Agent({
     
     Use backticks for all code elements and be specific about method signatures.
 
+    ### Internal Architecture & Design Decisions
+    Discuss the core architectural patterns, design principles, and key decisions that shape the library/tool. This section should provide developers with a deeper understanding of the system's structure and rationale.
+
+    - **Modular Design**: The library is structured into independent modules, each responsible for a specific functionality, facilitating maintainability and scalability.
+    - **Dependency Injection**: Utilizes dependency injection to manage component dependencies, enhancing testability and flexibility.
+    - **Asynchronous Processing**: Core operations are designed to be asynchronous, leveraging Promises and async/await for non-blocking execution.
+    - **Error Handling Strategy**: Implements a centralized error handling mechanism to capture and manage exceptions uniformly across modules.
+    - **Performance Optimizations**: Includes lazy loading of components and memoization of expensive function calls to improve runtime efficiency.
+    - **Scalability Considerations**: Designed with scalability in mind, allowing the system to handle increased load by distributing tasks across multiple modules or services.
+    - **Technology Stack Choices**: Decisions on programming languages, frameworks, and libraries that influence the system's capabilities and limitations.
+    - **Security Practices**: Incorporates security best practices such as input validation, authentication, and authorization to protect against common vulnerabilities.
+    - **Testing and Quality Assurance**: Emphasizes automated testing, code reviews, and continuous integration to maintain high code quality and reliability.
+    - **Documentation and Developer Experience**: Prioritizes clear documentation and intuitive APIs to enhance developer productivity and ease of use.
+    - **Continuous Deployment**: Implements automated deployment pipelines to ensure rapid and reliable delivery of updates to production environments.
+
     ### Common Patterns & Best Practices / Pitfalls
     List important usage patterns, best practices, and common pitfalls as bullet points. Each should follow this format:
     * **[Pattern/Practice Name]** - Brief explanation of the pattern and when to use it
-    
+
     Include 4-6 items covering:
     - Memory/performance optimization patterns
     - Error handling approaches

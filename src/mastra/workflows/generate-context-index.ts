@@ -211,16 +211,25 @@ const generateFinalDocsStep = createStep({
         [2-3 sentences about what this library does, based on what you learned]
         
         ### Core Concepts & Capabilities
-        * **[Concept]** - [Description]
-        [6-8 bullet points total]
+        * **[Concept]** - [Description] - [Additional details or examples]
+        [10-12 bullet points total]
         
+        ### Internal Architecture & Design Decisions
+        * **[Architecture Pattern]** - [Description] - [Specifics about implementation or impact]
+        * **[Design Principle]** - [Description] - [How it influences the codebase]
+        * **[Key Decision]** - [Description] - [Rationale and consequences]
+        * **[Technology Stack]** - [Description] - [Reasons for choice and impact on development]
+        * **[Future Enhancements]** - [Description] - [Planned features and improvements]
+        * **[Scalability Considerations]** - [Description] - [How the design supports growth and increased load]
+        [10-12 bullet points total]
+
         ### Key APIs
         [List the ${apiCount} APIs you found]
         [Format each as: * **\`signature\`** - brief description]
         [If there are many APIs, group them logically]
         
         ### Common Patterns & Best Practices
-        * **[Pattern]** - [Description]
+        * **[Pattern]** - [Description] - [When to use it and potential pitfalls]
         [4-6 bullet points total]
         
         IMPORTANT:
