@@ -34,6 +34,6 @@ export const openAIProvider = createOpenAI({
 // Export the configured model with timeout settings
 export const openAIModel = openAIProvider(openAIConfig.model, {
   // Additional model-specific configurations for reasoning
-  reasoningEffort: 'low',
+  reasoningEffort: 'medium',
   structuredOutputs: true,
 });

@@ -33,7 +33,7 @@ const fetchSourceStep = createStep({
         `Fetch source files for ${repoUrl}.
         
         EXECUTE THESE STEPS EXACTLY:
-        1. Call fetchAllDocs ONCE with searchType='source' and maxFiles=5
+        1. Call fetchAllDocs ONCE with searchType='source' and maxFiles=40
         2. Return the files you found
         
         DO NOT:
@@ -52,9 +52,9 @@ const fetchSourceStep = createStep({
       const filesMatch = result.text?.match(/FILES_FOUND:\s*(\d+)/);
       const filesCount = filesMatch ? parseInt(filesMatch[1]) : 0;
       
-      logStepEnd('fetch-source', { 
+      logStepEnd('fetch-source', {
         filesFound: filesCount,
-        hasTypescript 
+        hasTypescript
       }, Date.now() - startTime);
       
       return {
@@ -153,8 +153,8 @@ const extractApisStep = createStep({
       
       console.log(`Extracted ${apiCount} APIs from TypeScript definitions`);
       
-      logStepEnd('extract-apis', { 
-        apiCount 
+      logStepEnd('extract-apis', {
+        apiCount
       }, Date.now() - startTime);
       
       return {
